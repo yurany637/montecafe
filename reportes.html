@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reportes - Montecafe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="pagina-reportes">
+  <div class="layout">
+    
+    <!-- Menú lateral -->
+    <div class="sidebar">
+      <h2>Montecafe</h2>
+      <a href="dashboard.html">Inicio</a>
+      <a href="proveedores.html">Proveedores</a>
+      <a href="materia_prima.html">Materia Prima</a>
+      <a href="inventario.html">Inventario</a>
+      <a href="ventas.html">Ventas</a>
+      <a href="clientes.html">Clientes</a>
+      <a href="reportes.html" class="active">Reportes</a>
+      <a href="configuracion.html">Configuración</a>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+      <div class="header-top">
+        <h1>Módulo de Reportes</h1>
+        <div class="admin-controls">
+          <strong>Admin</strong>
+          <a href="index.html" class="logout-btn">Cerrar sesión</a>
+        </div>
+      </div>
+
+      <!-- Filtros para reportes -->
+      <div class="filters">
+        <label for="tipoReporte">Tipo de reporte:</label>
+        <select id="tipoReporte">
+          <option value="Inventario">Inventario</option>
+          <option value="Ventas">Ventas</option>
+        </select>
+
+        <label for="fechaInicial">Desde:</label>
+        <input type="date" id="fechaInicial">
+
+        <label for="fechaFinal">Hasta:</label>
+        <input type="date" id="fechaFinal">
+
+        <button id="btnGenerarReporte">Generar Reporte</button>
+      </div>
+
+      <!-- Tabla de resultados -->
+      <table id="tablaReportes">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Tipo</th>
+            <th>Descripción</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Aquí se insertan los reportes dinámicamente -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

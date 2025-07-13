@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Principal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <!-- Menú lateral -->
+    <div class="sidebar">
+      <h2>Montecafe</h2>
+      <a href="dashboard.html" class="active">Inicio</a>
+      <a href="proveedores.html">Proveedores</a>
+      <a href="materia_prima.html">Materia Prima</a>
+      <a href="inventario.html">Inventario</a>
+      <a href="ventas.html">Ventas</a>
+      <a href="clientes.html">Clientes</a>
+      <a href="reportes.html">Reportes</a>
+      <a href="configuracion.html">Configuración</a>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+      <div class="header-top">
+        <h1>Dashboard Principal</h1>
+        <div class="admin-controls">
+          <strong>Admin</strong>
+          <a href="index.html" class="logout-btn">Cerrar sesión</a>
+        </div>
+      </div>
+
+      <!-- Tarjetas -->
+      <div class="cards">
+        <div class="card"><strong>40</strong><br>Total proveedores</div>
+        <div class="card"><strong>350</strong><br>Total productos stock</div>
+        <div class="card"><strong>120</strong><br>Ventas del mes</div>
+        <div class="card"><strong>8</strong><br>Pedidos activos</div>
+      </div>
+
+          <!-- Alertas y calendario -->
+      <div class="alerts-calendar">
+        <div class="alert-box">
+          <h3>Alertas Activas</h3>
+          <ul>
+            <li>⚠ Productos con stock mínimo</li>
+            <li>⚠ Lotes próximos a caducar</li>
+            <li>⚠ Pedidos en espera</li>
+          </ul>
+        </div>
+        <div class="calendar-box">
+          <h3>Calendario de Producción/Envíos</h3>
+          <p><strong>Junio 2025</strong></p>
+          <table>
+            <tr><th>Dom</th><th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th><th>Vie</th><th>Sáb</th></tr>
+            <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td><span class="highlight">6</span></td><td>7</td></tr>
+            <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td></tr>
+            <tr><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td></tr>
+            <tr><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td></tr>
+            <tr><td>29</td><td>30</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

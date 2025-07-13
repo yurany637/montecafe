@@ -1,0 +1,1038 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f0e1;
+}
+
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #6f4329;
+  color: #fff;
+  padding: 20px 10px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.sidebar a:hover, .sidebar .active {
+  background-color: #a0785a;
+}
+
+.main-content {
+  flex: 1;
+  background-color: #f5f0e1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout-btn {
+  background-color: #6f4329;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background-color: #845a3c;
+}
+
+.cards {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 180px;
+  background: #fffaf3;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.quick-actions button {
+  background-color: #a0785a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quick-actions button:hover {
+  background-color: #845a3c;
+}
+
+.alerts-calendar {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.alert-box, .calendar-box {
+  flex: 1;
+  background-color: #fffaf3;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  min-width: 280px;
+}
+
+.alert-box ul {
+  list-style: none;
+  padding-left: 0;
+  color: #e74c3c;
+}
+
+.calendar-box table {
+  width: 100%;
+  border-spacing: 5px;
+  text-align: center;
+}
+
+.calendar-box .highlight {
+  background-color: #a0785a;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+
+/* Estilo solo para el Login */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background-color: #fffaf3;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+}
+
+.login-box h2 {
+  color: #6f4329;
+  margin-bottom: 20px;
+}
+
+.login-box label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  color: #6f4329;
+  font-weight: bold;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: #a0785a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background-color: #845a3c;
+}
+
+/* Estilo para formularios generales como Clientes */
+.form {
+  background-color: #fffaf3;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form button {
+  background-color: #a0785a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #845a3c;
+}
+
+/* Tablas para módulos como Clientes */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background-color: #fffaf3;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #a0785a;
+  color: white;
+}
+
+.acciones button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.editar {
+  background-color: #2980b9;
+  color: white;
+}
+
+.eliminar {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.acciones button:hover {
+  opacity: 0.8;
+}
+/* Estilo específico para la caja de configuración */
+.settings-box {
+  background-color: #fffaf3;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 40px auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  max-width: 600px;
+}
+
+/* Asegura que los campos y selects tengan el mismo estilo que formularios */
+.settings-box .form-group {
+  margin-bottom: 15px;
+}
+
+.settings-box label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.settings-box input,
+.settings-box select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.settings-box button {
+  background-color: #a0785a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.settings-box button:hover {
+  background-color: #845a3c;
+}
+
+/* Tema oscuro */
+.tema-oscuro {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.tema-oscuro .sidebar {
+  background-color: #333;
+}
+
+.tema-oscuro .sidebar a {
+  color: #fff;
+}
+
+.tema-oscuro .sidebar a:hover,
+.tema-oscuro .sidebar .active {
+  background-color: #555;
+}
+
+.tema-oscuro .main-content {
+  background-color: #2c2c2c;
+}
+
+.tema-oscuro .card,
+.tema-oscuro .form,
+.tema-oscuro .alert-box,
+.tema-oscuro .calendar-box,
+.tema-oscuro table {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+.tema-oscuro .login-box {
+  background-color: #2c2c2c;
+  color: #fff;
+}
+
+.tema-oscuro th {
+  background-color: #555;
+}
+
+.tema-oscuro .actions button {
+  background-color: #555;
+}
+
+.tema-oscuro .logout-btn {
+  background-color: #555;
+}
+
+/* Estilo específico solo para Inventario */
+.pagina-inventario .main-content {
+  background-color: #f5f0e1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.pagina-inventario .actions {
+  margin: 15px 0;
+}
+
+.pagina-inventario .actions button {
+  background-color: #a0785a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagina-inventario .actions button:hover {
+  background-color: #845a3c;
+}
+
+.pagina-inventario table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fffaf3;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.pagina-inventario th, .pagina-inventario td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.pagina-inventario th {
+  background-color: #a0785a;
+  color: white;
+}
+
+
+.pagina-inventario .main-content {
+  background-color: #f5f5f5;
+  color: #000;
+  padding: 20px;
+}
+
+.pagina-inventario .actions {
+  margin: 15px 0;
+}
+
+.pagina-inventario button {
+  padding: 10px 20px;
+  margin-right: 10px;
+}
+
+.pagina-inventario table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.pagina-inventario th,
+.pagina-inventario td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.pagina-inventario th {
+  background-color: #6f4329;
+  color: #fff;
+}
+
+/* Tema Oscuro para Inventario */
+.tema-oscuro.pagina-inventario .main-content {
+  background-color: #2c2c2c;
+  color: #fff;
+}
+
+.tema-oscuro.pagina-inventario table {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+.tema-oscuro.pagina-inventario th {
+  background-color: #8b5a3c;
+  color: #fff;
+}
+
+.tema-oscuro.pagina-inventario td {
+  border: 1px solid #555;
+}
+
+.tema-oscuro.pagina-inventario button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+}
+
+.tema-oscuro.pagina-inventario button:hover {
+  background-color: #444;
+}
+
+/* Diseño específico para Materia Prima */
+.pagina-materia-prima .main-content {
+  background-color: #f5f0e1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.pagina-materia-prima .form {
+  background-color: #fffaf3;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.pagina-materia-prima .form-group {
+  margin-bottom: 15px;
+}
+
+.pagina-materia-prima .form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.pagina-materia-prima .form-group input,
+.pagina-materia-prima .form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.pagina-materia-prima .form button {
+  background-color: #a0785a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagina-materia-prima .form button:hover {
+  background-color: #845a3c;
+}
+
+.pagina-materia-prima table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background-color: #fffaf3;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.pagina-materia-prima th, .pagina-materia-prima td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.pagina-materia-prima th {
+  background-color: #a0785a;
+  color: white;
+}
+
+.pagina-materia-prima .acciones button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.pagina-materia-prima .editar {
+  background-color: #2980b9;
+  color: white;
+}
+
+.pagina-materia-prima .eliminar {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.pagina-materia-prima .acciones button:hover {
+  opacity: 0.8;
+}
+
+/* Tema oscuro exclusivo para Materia Prima */
+.tema-oscuro .pagina-materia-prima .main-content {
+  background-color: #2c2c2c;
+}
+
+.tema-oscuro .pagina-materia-prima .form,
+.tema-oscuro .pagina-materia-prima table {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+.tema-oscuro .pagina-materia-prima th {
+  background-color: #555;
+}
+
+.tema-oscuro .pagina-materia-prima .form-group label {
+  color: #fff;
+}
+
+.tema-oscuro .pagina-materia-prima .acciones button {
+  background-color: #555;
+}
+
+/* Módulo de Proveedores */
+.pagina-proveedores .main-content {
+  background-color: #f5f0e1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.pagina-proveedores .form {
+  background-color: #fffaf3;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.pagina-proveedores .form-group {
+  margin-bottom: 15px;
+}
+
+.pagina-proveedores .form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.pagina-proveedores .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.pagina-proveedores .form button {
+  background-color: #a0785a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagina-proveedores .form button:hover {
+  background-color: #845a3c;
+}
+
+.pagina-proveedores table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background-color: #fffaf3;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.pagina-proveedores th, .pagina-proveedores td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.pagina-proveedores th {
+  background-color: #a0785a;
+  color: white;
+}
+
+.pagina-proveedores .acciones button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.pagina-proveedores .editar {
+  background-color: #2980b9;
+  color: white;
+}
+
+.pagina-proveedores .eliminar {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.pagina-proveedores .acciones button:hover {
+  opacity: 0.8;
+}
+
+.pagina-proveedores .logout-button {
+  background-color: #6f4329;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pagina-proveedores .logout-button:hover {
+  background-color: #4e2e1e;
+}
+
+/* Tema oscuro para el módulo de Proveedores */
+.tema-oscuro .pagina-proveedores .main-content {
+  background-color: #2c2c2c;
+}
+
+.tema-oscuro .pagina-proveedores .form,
+.tema-oscuro .pagina-proveedores table {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+.tema-oscuro .pagina-proveedores th {
+  background-color: #555;
+}
+
+.tema-oscuro .pagina-proveedores .form-group label {
+  color: #fff;
+}
+
+.tema-oscuro .pagina-proveedores .acciones button {
+  background-color: #555;
+}
+
+.tema-oscuro .pagina-proveedores .editar {
+  background-color: #3498db;
+}
+
+.tema-oscuro .pagina-proveedores .eliminar {
+  background-color: #e74c3c;
+}
+
+.tema-oscuro .pagina-proveedores .logout-button {
+  background-color: #555;
+}
+
+/* Módulo Reportes */
+.pagina-reportes .main-content {
+  background-color: #f5f0e1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.pagina-reportes .report-filters {
+  background-color: #fffaf3;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-top: 20px;
+}
+
+.pagina-reportes .form-group {
+  margin-bottom: 15px;
+}
+
+.pagina-reportes label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.pagina-reportes input,
+.pagina-reportes select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.pagina-reportes button {
+  background-color: #a0785a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.pagina-reportes button:hover {
+  background-color: #845a3c;
+}
+
+.pagina-reportes table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background-color: #fffaf3;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.pagina-reportes th,
+.pagina-reportes td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.pagina-reportes th {
+  background-color: #a0785a;
+  color: white;
+}
+
+.pagina-reportes .logout-btn {
+  background-color: #6f4329;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pagina-reportes .logout-btn:hover {
+  background-color: #4e2f1e;
+}
+
+/* Tema oscuro para Reportes */
+.pagina-reportes .main-content {
+  background-color: #f5f5f5;
+  color: #000;
+  padding: 20px;
+}
+
+.pagina-reportes .filters {
+  margin: 15px 0;
+}
+
+.pagina-reportes label {
+  margin-right: 10px;
+}
+
+.pagina-reportes select,
+.pagina-reportes input[type="date"],
+.pagina-reportes button {
+  margin-right: 10px;
+  padding: 5px 10px;
+}
+
+.pagina-reportes table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.pagina-reportes th,
+.pagina-reportes td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.pagina-reportes th {
+  background-color: #6f4329;
+  color: #fff;
+}
+
+/* Tema Oscuro para Reportes */
+.tema-oscuro.pagina-reportes .main-content {
+  background-color: #2c2c2c;
+  color: #fff;
+}
+
+.tema-oscuro.pagina-reportes .filters label {
+  color: #fff;
+}
+
+.tema-oscuro.pagina-reportes select,
+.tema-oscuro.pagina-reportes input[type="date"] {
+  background-color: #3a3a3a;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.tema-oscuro.pagina-reportes button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+}
+
+.tema-oscuro.pagina-reportes button:hover {
+  background-color: #444;
+}
+
+.tema-oscuro.pagina-reportes table {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+.tema-oscuro.pagina-reportes th {
+  background-color: #8b5a3c;
+  color: #fff;
+}
+
+.tema-oscuro.pagina-reportes td {
+  border: 1px solid #555;
+}
+
+/* Módulo Ventas */
+.pagina-ventas .main-content {
+  background-color: #f5f0e1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.pagina-ventas .sales-form,
+.pagina-ventas .sales-summary {
+  background-color: #fffaf3;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.pagina-ventas .sales-summary {
+  margin-top: 30px;
+}
+
+.pagina-ventas .form-group {
+  margin-bottom: 15px;
+}
+
+.pagina-ventas label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.pagina-ventas input,
+.pagina-ventas select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.pagina-ventas .actions {
+  margin-top: 20px;
+}
+
+.pagina-ventas .actions button {
+  background-color: #a0785a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagina-ventas .actions button:hover {
+  background-color: #845a3c;
+}
+
+.pagina-ventas .logout-btn {
+  background-color: #6f4329;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pagina-ventas .logout-btn:hover {
+  background-color: #4e2f1e;
+}
+
+/* Tema oscuro exclusivo para el módulo Ventas */
+.tema-oscuro.pagina-ventas .main-content {
+  background-color: #2c2c2c;
+  color: #fff;
+}
+
+.tema-oscuro.pagina-ventas .sales-form {
+  background-color: #3a3a3a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.tema-oscuro.pagina-ventas .sales-form input,
+.tema-oscuro.pagina-ventas .sales-form select {
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #777;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.tema-oscuro.pagina-ventas .sales-form button {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tema-oscuro.pagina-ventas .sales-form button:hover {
+  background-color: #444;
+}
+
+.tema-oscuro.pagina-ventas .sales-summary {
+  background-color: #3a3a3a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.tema-oscuro.pagina-ventas .sales-summary h2 {
+  color: #fff;
+}
+
+/* Tema oscuro exclusivo para Configuración */
+.tema-oscuro.pagina-configuracion .main-content {
+  background-color: #2c2c2c;
+  color: #fff;
+}
+
+.tema-oscuro.pagina-configuracion .settings-box {
+  background-color: #3a3a3a;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.tema-oscuro.pagina-configuracion .form-group label {
+  color: #fff;
+}
+
+.tema-oscuro.pagina-configuracion input,
+.tema-oscuro.pagina-configuracion select {
+  background-color: #555;
+  color: white;
+  border: 1px solid #777;
+}
+
+.tema-oscuro.pagina-configuracion button {
+  background-color: #555;
+  color: white;
+}
+
+.tema-oscuro.pagina-configuracion button:hover {
+  background-color: #444;
+}

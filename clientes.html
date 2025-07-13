@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Clientes - Montecafe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    
+    <!-- Menú lateral -->
+    <div class="sidebar">
+      <h2>Montecafe</h2>
+      <a href="dashboard.html">Inicio</a>
+      <a href="proveedores.html">Proveedores</a>
+      <a href="materia_prima.html">Materia Prima</a>
+      <a href="inventario.html">Inventario</a>
+      <a href="ventas.html">Ventas</a>
+      <a href="clientes.html" class="active">Clientes</a>
+      <a href="reportes.html">Reportes</a>
+      <a href="configuracion.html">Configuración</a>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+      <div class="header-top">
+        <h1>Módulo de Clientes</h1>
+        <div class="admin-controls">
+          <strong>Admin</strong>
+          <a href="index.html" class="logout-btn">Cerrar sesión</a>
+        </div>
+      </div>
+
+      <!-- Formulario para registrar cliente -->
+      <div class="form">
+        <h2>Registrar Cliente</h2>
+        <div class="form-group">
+          <label>Nombre del cliente</label>
+          <input type="text" id="nombreCliente" placeholder="Ej: Juan Pérez">
+        </div>
+        <div class="form-group">
+          <label>Teléfono</label>
+          <input type="tel" id="telefonoCliente" placeholder="Ej: 3101234567">
+        </div>
+        <div class="form-group">
+          <label>Correo electrónico</label>
+          <input type="email" id="correoCliente" placeholder="cliente@email.com">
+        </div>
+        <div class="form-group">
+          <label>Dirección</label>
+          <input type="text" id="direccionCliente" placeholder="Ej: Calle 123, Bogotá">
+        </div>
+        <button id="btnRegistrarCliente">Registrar Cliente</button>
+      </div>
+
+      <!-- Tabla de clientes -->
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+            <th>Email</th>
+            <th>Dirección</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaClientes">
+          <tr>
+            <td>CL001</td>
+            <td>Juan Pérez</td>
+            <td>3101234567</td>
+            <td>juan@example.com</td>
+            <td>Calle 45, Bogotá</td>
+            <td class="acciones">
+              <button class="editar">Editar</button>
+              <button class="eliminar">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>CL002</td>
+            <td>María Rodríguez</td>
+            <td>3204567890</td>
+            <td>maria@correo.com</td>
+            <td>Cra 10, Medellín</td>
+            <td class="acciones">
+              <button class="editar">Editar</button>
+              <button class="eliminar">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

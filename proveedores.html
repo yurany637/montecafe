@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Proveedores - Montecafe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="layout">
+  <div class="sidebar">
+    <h2>Montecafe</h2>
+    <a href="dashboard.html">Inicio</a>
+    <a href="proveedores.html" class="active">Proveedores</a>
+    <a href="materia_prima.html">Materia Prima</a>
+    <a href="inventario.html">Inventario</a>
+    <a href="ventas.html">Ventas</a>
+    <a href="clientes.html">Clientes</a>
+    <a href="reportes.html">Reportes</a>
+    <a href="configuracion.html">Configuración</a>
+  </div>
+
+  <div class="main-content">
+    <div class="header-top">
+      <h1>Módulo de Proveedores</h1>
+      <div class="admin-controls">
+        <strong>Admin</strong>
+        <a href="index.html" class="logout-btn">Cerrar sesión</a>
+      </div>
+    </div>
+
+    <div class="form">
+      <h2>Registrar Proveedor</h2>
+      <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" id="nombreProveedor" placeholder="Ej: Proveedora del Café S.A.">
+      </div>
+      <div class="form-group">
+        <label>Teléfono</label>
+        <input type="text" id="telefonoProveedor" placeholder="Ej: 3100000000">
+      </div>
+      <div class="form-group">
+        <label>Correo</label>
+        <input type="email" id="correoProveedor" placeholder="Ej: proveedor@correo.com">
+      </div>
+      <div class="form-group">
+        <label>Ciudad</label>
+        <input type="text" id="ciudadProveedor" placeholder="Ej: Bogotá">
+      </div>
+      <button id="btnRegistrarProveedor">Registrar</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Teléfono</th>
+          <th>Correo</th>
+          <th>Ciudad</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaProveedores">
+        <!-- Proveedores existentes aquí -->
+      </tbody>
+    </table>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
